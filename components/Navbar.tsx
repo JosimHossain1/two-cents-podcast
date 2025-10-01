@@ -17,31 +17,31 @@ const Navbar = () => {
 
           <div className='hidden md:flex items-center space-x-8'>
             <Link
-              href='/episodes'
+              href='#episodes'
               className='text-sm font-medium hover:text-yellow-500 transition-colors'
             >
               Episodes
             </Link>
             <Link
-              href='/clips'
+              href='#clips'
               className='text-sm font-medium hover:text-yellow-500 transition-colors'
             >
               Clips
             </Link>
             <Link
-              href='/about'
+              href='#about'
               className='text-sm font-medium hover:text-yellow-500 transition-colors'
             >
               About
             </Link>
             <Link
-              href='/sponsors'
+              href='#sponsors'
               className='text-sm font-medium hover:text-yellow-500 transition-colors'
             >
               Sponsors
             </Link>
             <Link
-              href='/contact'
+              href='#contact'
               className='text-sm font-medium hover:text-yellow-500 transition-colors'
             >
               Contact

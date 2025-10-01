@@ -4,9 +4,9 @@ import { Card } from './ui/card';
 
 const About = () => {
   return (
-    <div className='min-h-screen bg-gray-50'>
-      <main className='pt-16'>
-        <section className='bg-gradient-to-br from-black to-gray-900 text-white py-16'>
+
+    <section className=' bg-gray-50'>
+          <section className='bg-gradient-to-br from-black to-gray-900 text-white py-16'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h1 className='text-5xl font-bold mb-4'>
               About <span className='text-yellow-400'>2 Cents</span>
@@ -120,8 +120,8 @@ const About = () => {
             </div>
           </div>
         </section>
-      </main>
-    </div>
+      </section>
+
   );
 };
 
