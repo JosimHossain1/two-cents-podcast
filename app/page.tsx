@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Newsletter from '@/components/Newsletter';
 import Contact from '@/components/Contact'; 
 import Sponsor from '@/components/Sponsor';
+import ShotsVideo from '@/components/ShotsVideo';
 export default function Home() {
   return (
     <div className='min-h-screen'>
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <About />
       <BusinessInsight />
+      <ShotsVideo />
       <Sponsor />
       <Contact />
       <Newsletter />
