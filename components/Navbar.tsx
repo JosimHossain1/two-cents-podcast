@@ -1,10 +1,9 @@
-'use client';
-
 import Link from 'next/link';
 import { Mic as Mic2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export function Navbar() {
+
+const Navbar = () => {
   return (
     <nav className='border-b bg-white/80 backdrop-blur-md fixed top-0 w-full z-50'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -55,5 +54,7 @@ export function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
+
+export default Navbar
