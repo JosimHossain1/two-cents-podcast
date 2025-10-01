@@ -23,7 +23,7 @@ export function DashboardNav() {
   return (
     <aside className="w-64 bg-gray-900 text-white min-h-screen fixed left-0 top-0 flex flex-col">
       <div className="p-6 border-b border-gray-800">
-        <Link href="/dashboard" className="flex items-center space-x-2 group">
+        <Link href="/" className="flex items-center space-x-2 group">
           <div className="bg-yellow-400 p-2 rounded-lg group-hover:bg-yellow-500 transition-colors">
             <Mic2 className="h-5 w-5 text-black" />
           </div>
