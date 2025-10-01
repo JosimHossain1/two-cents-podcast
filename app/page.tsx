@@ -1,9 +1,10 @@
 'use client';
 
+import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Play, TrendingUp, Users, Briefcase, ArrowRight } from 'lucide-react';
+import { Play, TrendingUp, Users, Briefcase } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -112,7 +113,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
