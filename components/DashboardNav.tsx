@@ -8,12 +8,12 @@ import { Button } from '@/components/ui/button';
 
 const navItems = [
   { href: '/dashboard', label: 'Overview', icon: LayoutDashboard },
+  { href: '/dashboard/analytics', label: 'Analytics', icon: BarChart3 },
   { href: '/dashboard/episodes', label: 'Episodes', icon: Mic2 },
   { href: '/dashboard/guests', label: 'Guests', icon: Users },
   { href: '/dashboard/clips', label: 'Clips', icon: Scissors },
   { href: '/dashboard/sponsors', label: 'Sponsors', icon: Briefcase },
   { href: '/dashboard/projects', label: 'Projects', icon: FolderKanban },
-  { href: '/dashboard/analytics', label: 'Analytics', icon: BarChart3 },
   { href: '/dashboard/settings', label: 'Settings', icon: Settings },
 ];
 
