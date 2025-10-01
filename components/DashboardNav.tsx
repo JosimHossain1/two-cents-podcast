@@ -58,12 +58,7 @@ export function DashboardNav() {
       </nav>
 
       <div className="p-4 border-t border-gray-800">
-        <Link href="/" className="block mb-2">
-          <Button variant="outline" className="w-full border-gray-700 text-gray-300 hover:bg-gray-800">
-            View Public Site
-          </Button>
-        </Link>
-        <Button variant="ghost" className="w-full text-gray-400 hover:text-white hover:bg-gray-800">
+        <Button variant="ghost" className="w-full text-red-400 hover:text-white hover:bg-red-800">
           <LogOut className="h-5 w-5 mr-2" />
           Sign Out
         </Button>
