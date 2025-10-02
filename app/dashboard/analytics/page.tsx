@@ -1,13 +1,59 @@
 'use client';
 
 import { Card } from '@/components/ui/card';
-import { TrendingUp, Eye, Share2, CirclePlay as PlayCircle } from 'lucide-react';
+import axios from 'axios';
+import { TrendingUp, Eye, Youtube,  Video } from 'lucide-react';
+import {useState, useEffect} from 'react';
 
 export default function AnalyticsPage() {
-  const stats = [
-    { label: 'Total Plays', value: '45,231', change: '+12%', icon: PlayCircle, color: 'text-green-600' },
-    { label: 'Total Views', value: '128,492', change: '+8%', icon: Eye, color: 'text-blue-600' },
-    { label: 'Social Shares', value: '3,482', change: '+24%', icon: Share2, color: 'text-purple-600' },
+
+  type YTStatistics = {
+    viewCount: string;
+    subscriberCount: string;
+    videoCount: string;
+  };
+  const [ytData, setYtData] = useState<YTStatistics>([]);
+  const [ytVideoData, setYtVideoData] = useState<any[]>([]);
+
+
+   useEffect(() => {
+      const fetchYoutubeData = async () => {
+        try {
+          const data = await axios.get(
+            `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCJJBtUqjm-QjJ7Cvtz0yqbQ
+  &key=AIzaSyBidMeBzIxM42xDfPoBHetgVCn_ktIGQOs`,
+          );
+          setYtData(data.data.items[0].statistics);
+          // console.log(data.data.items[0].statistics);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      const fetchYTVideoData = async () => {
+        try {
+          const data = await axios.get(
+            `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCJJBtUqjm-QjJ7Cvtz0yqbQ&maxResults=490&order=date&type=video&key=AIzaSyBidMeBzIxM42xDfPoBHetgVCn_ktIGQOs`,
+          );
+          setYtVideoData(data);
+          console.log(data);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      fetchYoutubeData();
+      fetchYTVideoData();
+    }, []);
+
+    const totalSubscribers = parseInt(ytData.subscriberCount).toLocaleString();
+    const totalViews = parseInt(ytData.viewCount).toLocaleString();
+    const totalVideos = parseInt(ytData.videoCount).toLocaleString();
+
+      const stats = [
+    { label: 'Total Subscribers', value: totalSubscribers, change: '+12%', icon: Youtube, color: 'text-red-600' },
+    { label: 'Total Views', value: totalViews, change: '+8%', icon: Eye, color: 'text-blue-600' },
+    { label: 'Total Videos', value: totalVideos, change: '+24%', icon: Video, color: 'text-purple-600' },
     { label: 'Growth Rate', value: '15.3%', change: '+3%', icon: TrendingUp, color: 'text-yellow-600' },
   ];
 

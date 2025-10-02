@@ -1,7 +1,6 @@
 'use client';
 
 import About from '@/components/About';
-import BusinessInsight from '@/components/Business-Insight';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
@@ -15,7 +14,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <BusinessInsight />
       <ShotsVideo />
       <Sponsor />
       <Contact />
