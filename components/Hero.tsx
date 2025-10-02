@@ -56,8 +56,8 @@ const Hero = () => {
           </div>
 
           <h1 className='text-5xl md:text-6xl font-bold mb-6 leading-tight'>
-            The biggest
-            <span className='text-yellow-400'>Business Podcast </span>
+            The biggest 
+            <span className='text-yellow-400'> Business Podcast </span>
             in Bangladesh!
           </h1>
 
